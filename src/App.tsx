@@ -24,6 +24,7 @@ import {
 import '@xyflow/react/dist/style.css';
 
 import HomeNode from './nodes/HomeNode';
+import { useThemeDetector } from "./lib/utils";
 
 // import './text-updater-node.css';
 
@@ -64,6 +65,7 @@ const initialNodes = [
 const nodeTypes = { textUpdater: HomeNode };
 
 export default function App() {
+  useThemeDetector
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
 
